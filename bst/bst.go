@@ -73,7 +73,7 @@ func (bt *BinaryTree) FindMax(arg ...*node) (int, *node) {
 	if len(arg) > 0 {
 		current = arg[0]
 	}
-	
+
 	for current.right != nil {
 		current = current.right
 	}
@@ -116,3 +116,5 @@ func (bt *BinaryTree) Delete(value int) {
 	deleteNode.data = minData
 	replaceNode(minNode.parent, minNode, minNode.right)
 }
+
+// some comments
