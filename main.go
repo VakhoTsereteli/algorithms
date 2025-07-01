@@ -1,22 +1,19 @@
 package main
 
 import (
-	"algorithms/bst"
 	"fmt"
+
+	countingsort "algorithms/countingSort"
 )
 
-func test()(int,int,int){
-	return 1,2,3
+func test() (int, int, int) {
+	return 1, 2, 3
 }
 
 func main() {
-	bt := bst.New()
-	bt.Insert(22)
-	bt.Insert(25)
-	bt.Insert(-5)
-	bt.Insert(-22)
+	nums := []int{4, 2, 2, 8, 3, 3, 1}
 
-	btMin, _ := bt.FindMin()
-	fmt.Println(btMin)
+	sortArr := countingsort.CountingSor(nums)
 
+	fmt.Println(sortArr)
 }
